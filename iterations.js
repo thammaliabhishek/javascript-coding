@@ -89,7 +89,7 @@ const Print_pattern = (N) =>
 const Prime_Check = (N) => 
 {
 	for(let i = 2;i<N;i++){
-	  if(N%i==1){
+	  if(N%i==1){}
 	    return "YES";
 	  }
 	  else{
@@ -118,3 +118,21 @@ const Print_Table = (N) =>
 	  console.log(`${N} * ${i} = ${result}`);
 	}
 };
+
+const array=["a","b","c"];
+array.forEach(function convstr(ele){
+  console.log(str.toUpperCase(ele));
+})
+
+const arrayAdd=[1,2,3];
+arrayAdd.forEach(function Add(){
+
+})
+
+const arrayDate=["2020-12-98","2020-34-89"];
+
+const arrDate = arrayDate.Map(function (ele){
+  let arraysplit= ele.split("-");
+  return arraysplit;
+})
+console.log(arrayDate);
