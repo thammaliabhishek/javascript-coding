@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    
+    <h1 class="h1">DOM </h1>
+    <div id="msg">Welcome To India</div>
+    <br>
+    <h1>How Are You!!!</h1>
+    <br>
+    <h1>Hello</h1>
+    <br>
+    <div class="BOX">div box.</div>
+    <br>
+   
+    <button onclick="changeText()">Click</button>
+    <br>
+    <br>
+    <div class="flex-container">
+       <div class="flex-item">flex Item 1</div>
+       <div class="flex-item">Flex Item 2</div>
+       <div class="flex-item">Flex Item 3</div>
+    </div>
+    <br>
+    <br>
+    <button type="button" onclick="flex_Direction()">Change Flex direction</button>
+    <br>
+    <h1 id="heading">CHANGE COLOR!!</h1>
+    <button type="button" onclick="change_Color()">Click Here</button>
+    <br>
+    <br>
+    <p><b>Welcome</b></p>
+    <br>
+    <button type="button" onclick="replace_Text()">Replace Text</button><br>
+    <br>
+   <p class="clockDesign" >Time:</p>
+     <nav class="time">
+        <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span> ::
+    <span id="ampm">AM</span>
+    </nav><br>
+    <div class="dropdown">
+        <select name="" onchange="yearChange()" id="yearSelect">
+            <option value="select">Select year</option>
+            <option value="2015-2016">2015-2016</option>
+            <option value="2016-2017">2016-2017</option>
+            <option value="2017-2018">2017-2018</option>
+            <option value="2018-2019">2018-2019</option>
+            <option value="2019-2020">2019-2020</option>
+            <option value="2021-2022">2021-2022</option>
+
+        </select>
+        <p class="year">the  year is :<span id="year"></span></p>
+    </div><br>
+    <form action="./dom.html" class="form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="name" required><br><br>
+        <label for="email">Email:</label>
+        <input oninput="emailCheck()" type="email" name="email" id="email" placeholder="@email.com" required>
+        <span id="emailcheck" class="check" >domain should be prepbytes.com!!</span><br><br>
+        <label for="phoneno">Phone No:</label>
+        <input oninput="numberCheck()" type="number" name="phoneno" id="phoneno" placeholder="Contact No." required>
+        <span class="check" id="digitcheck">number should have10 digits!!</span>
+        <span class="check" id="startcheck">number start with 91 !!</span><br><br>
+        <label for="byear">Birth Year:</label>
+        <input oninput="yearCheck()" type="number" name="byear" id="byear" placeholder="birth year" required>
+        <span class="check" id="byearcheck">birth year should be > 1995!!</span><br><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+    <script src="dom.js"></script>
+  
+
+</body>
+</html>
