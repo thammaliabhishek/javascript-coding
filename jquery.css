@@ -1,0 +1,16 @@
+#heading{
+    display: none;
+    color:green;
+    width:180px;
+    height:40px;
+    border:2px solid green;
+    box-shadow:3px 4px 2px black;
+}
+#btnshow{
+display: inline-block;
+background-color:blue;
+}
+#btnhide{
+    display: inline-block;
+    background-color:red;
+}
