@@ -14,22 +14,86 @@ function myDisplayer(some) {
   
 //2.Write callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on
 
+function num(){
+  setTimeout(() =>{
+      console.log('1');
 
+      setTimeout(() =>{
+          console.log('2');   
+          
+          setTimeout(() =>{
+              console.log('3');
 
-for(var i = 0; i <= 10; i++){
-    print(i);
+              setTimeout(() =>{
+                  console.log('4');
+
+                  setTimeout(() =>{
+                      console.log('5');
+
+                      setTimeout(() =>{
+                          console.log('6');
+
+                          setTimeout(() =>{
+                              console.log('7');
+
+                              console.log('End');
+
+                          },7000)
+                      },6000)
+                  },5000)
+              },4000)
+          },3000)
+      },2000)
+  },1000)
 }
 
+//3."Write promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec ,  2 should be printed after 2 sec, 3 should be printed after 3 sec and so on.  Numbers
 
-function print(i){
-    setTimeout(function(){
-        console.log(i)
-    },i*2000);
-}
+let num =new Promise((fullfilled,reject)=>{
+     
+  setTimeout(()=>{
+      fullfilled(console.log("1"))
+  },1000)
+ 
+}).then( ()=> new Promise((fullfilled,reject)=>{
+
+ setTimeout(()=>{
+  fullfilled(console.log("2"))
+ },2000)
+
+}) ).then( ()=> new Promise((fullfilled,reject)=>{
+
+ setTimeout(()=>{
+  fullfilled(console.log("3"))
+ },3000)
+
+}) ).then(()=> new Promise((fullfilled,reject)=>{
+ 
+  setTimeout(()=>{
+      fullfilled(console.log("4"))
+  },4000)
+
+})).then(()=> new Promise((fullfilled,reject)=>{
+ 
+  setTimeout(()=>{
+      fullfilled(console.log("5"))
+  },5000)
+})).then( ()=> new Promise((fullfilled,rej)=>{
+ 
+  setTimeout(()=>{
+     fullfilled(console.log("6"))
+  },6000)
+
+})).then(()=> new Promise((fullfilled,rej)=>{
+  
+  setTimeout(()=>{
+      fullfilled(console.log("7"))
+      console.log("end of promises");
+  },7000)
+}));
 
 
-
-//3.Explain callback hell.
+//--->Explain callback hell.
 
 //Callback hell is a phenomenon that afflicts a JavaScript developer
 //when he tries to execute multiple asynchronous operations one after the other.
@@ -133,7 +197,7 @@ let order = (call_Steps) => {
   order(production);
 
 
-  //7.
+  //7.Create examples to explain promises function
 
 
   let myPromise = new Promise(function(myResolve, myReject) {
