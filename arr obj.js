@@ -20,6 +20,7 @@ let studentRecords = [{
     name: 'Wick',
     id: 115,
     marks: 75
+  
   }
 ]
 
